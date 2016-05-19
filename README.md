@@ -1,7 +1,4 @@
-#blast
-=======
 # blast
->>>>>>> 94fb4bf3899f0b02884167802c002c6aacb5595d
 
 README
 =======
@@ -47,8 +44,7 @@ accumulated methods in the library and do sequence comparison by Smith Waterman 
 
 OTHER PARTS
 -----------
-The old_version folder contains other versions of blast.pl used to optimeze the 
-programs. I didn't delete them.
+The old_version folder contains other versions of blast.pl and library construction scripts  used to optimeze the program. I just didn't delete them.
 The sample folder folder contains the query sequence from homo sapiens. You can use the fasta files to test blast.pl.
 
 
