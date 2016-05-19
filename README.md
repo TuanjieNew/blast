@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #blast
 =======
 # blast
@@ -34,10 +33,7 @@ USAGE and DETAILS of ALGORITHM
 ==============================
 
 This program contains three parts. 
-<<<<<<< HEAD
 If you want to try it, you need to change the path of files.
-=======
->>>>>>> 94fb4bf3899f0b02884167802c002c6aacb5595d
 
 1. Use splice_genome.pl to cut the whole genome fasta file (e.g., hg19.fa) to single chromosome
 (e.g., 1.fa,2.fa, number is the chromosome number) as reference.
@@ -49,13 +45,10 @@ a library.
 accumulated methods in the library and do sequence comparison by Smith Waterman algorithm.
 4. alignment.pl the perl version of Smith Waterman algorithm.
 
-<<<<<<< HEAD
 OTHER PARTS
 -----------
 The old_version folder contains other versions of blast.pl used to optimeze the 
 programs. I didn't delete them.
 The sample folder folder contains the query sequence from homo sapiens. You can use the fasta files to test blast.pl.
 
-=======
->>>>>>> 94fb4bf3899f0b02884167802c002c6aacb5595d
 
