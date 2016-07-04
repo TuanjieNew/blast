@@ -74,8 +74,8 @@ def alignment(seqq1,seq2):
                 max_score=matrix[i][j]
     #trace back
 
-    print('max_j: '+str(max_j))
-    print('max_i: '+str(max_i))
+    #print('max_j: '+str(max_j))
+    #print('max_i: '+str(max_i))
     align1=''
     align2=''
     #j=max_j
@@ -109,27 +109,37 @@ def alignment(seqq1,seq2):
                 j-=1
     align1=align1[::-1]
     align2=align2[::-1]
-    print('seq1: '+align1)
-    print('seq2: '+align2)
+    #number scale
+    ali_str = '1---'
+    for i in range(len(align1)):
+        if (i+1) % 5 ==0:
+            if i >= 9:
+                ali_str = ali_str +str(i+1)+'---'
+            elif i >99:
+                ali_str = ali_str + str(i+1)+'--'
+            else: 
+                ali_str = ali_str + str(i+1)+'----'
+    print('\n')
+    print('\033[1;31;40m'+'loca: '+'\033[0m'+ali_str[:len(align1)])
+    print('\033[1;31;40m'+'seq1: '+'\033[0m'+align1)
+    print('\033[1;31;40m'+'seq2: '+'\033[0m'+align2)
     c=0
     equ_num=0
     non_eq=0
-    while c < len(align1):
+    for c in range(len(align1)):
         if align1[c]==align2[c]:
             equ_num+=1
+        '''
         else:
             non_eq+=1
         if non_eq>5:
             return non_eq+equ_num
-        c+=1
+        '''
+    return equ_num
         
 
 seq1='MALWMRLLPLLALLALWGPDPAAAFVNQHLCGSHLVEALYLVCGERGFFYTPKTRREAED'
 seq2='MALWMRFLPLLALLVVWEPKPAQAFVKQHLCGPHLVEALYLVCGERGFFYTPKSRREVED'
 eq_num=alignment(seq1,seq2)
-print('eq_num: '+str(eq_num))
-
-
-
-
+print('\033[1;31;40m'+'eq_num: '+'\033[0m'+str(eq_num)+'\n')
 
